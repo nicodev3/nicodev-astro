@@ -11,14 +11,6 @@ const psychologueProjects = [
 		location: "Les Lilas"
 	},
 	{
-		title: "CMS - Mélissa Vidal",
-		description: "Site avec système de gestion de contenu",
-		image: "/images/screenshots/psychologue-toulouse.png",
-		url: "https://psychologue-toulouse.info",
-		category: "CMS",
-		location: "Toulouse"
-	},
-	{
 		title: "Site Vitrine - Audrey Larcebau",
 		description: "Site vitrine moderne avec EMDR",
 		image: "/images/screenshots/psy-emdr-cotebasque.fr.png",
@@ -41,14 +33,6 @@ const psychologueProjects = [
 		url: "https://montpellier-psychologue.pro",
 		category: "Site vitrine",
 		location: "Montpellier"
-	},
-	{
-		title: "Site du livre d'Anne-Françoise LOF",
-		description: "Site promotionnel pour un livre",
-		image: "/images/screenshots/aloe.png",
-		url: "https://aloe-arborescens-cancer.com/",
-		category: "Site promotionnel",
-		location: "France"
 	},
 	{
 		title: "Site vitrine - Delphine Cima",
@@ -82,14 +66,6 @@ const psychologueProjects = [
 		category: "Site vitrine",
 		location: "Andrézieux-Bouthéon"
 	},
-	{
-		title: "Site vitrine - Séverine REISSER",
-		description: "Site vitrine professionnel",
-		image: "/images/screenshots/psy-livry-gargan.jpg",
-		url: "https://psychologue-a-livry-gargan.fr/",
-		category: "Site vitrine",
-		location: "Livry-Gargan"
-	}
 ];
 ---
 
@@ -134,8 +110,62 @@ const psychologueProjects = [
 		</div>
 	</section>
 
-	<!-- Projects Grid -->
+	<!-- Approach Section -->
 	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+				Mon approche collaborative
+			</h2>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+				<div>
+					<h3 class="text-2xl font-semibold text-gray-900 mb-6">
+						Co-construction du contenu
+					</h3>
+					<div class="space-y-4 text-gray-600">
+						<p>
+							Je ne crée pas des sites "clés en main" sans votre implication. Au contraire, je vous accompagne dans la réflexion sur votre identité professionnelle et la façon de la présenter en ligne.
+						</p>
+						<p>
+							Ensemble, nous définissons :
+						</p>
+						<ul class="list-disc list-inside space-y-2 ml-4">
+							<li>Votre approche thérapeutique</li>
+							<li>Vos spécialités et domaines d'expertise</li>
+							<li>L'organisation de votre cabinet</li>
+							<li>Les informations pratiques pour vos patients</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bg-white p-8 rounded-lg shadow-lg">
+					<h4 class="text-lg font-semibold text-gray-900 mb-4">Pourquoi cette approche ?</h4>
+					<div class="space-y-3 text-gray-600">
+						<div class="flex items-start space-x-3">
+							<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+								<span class="text-blue-600 text-sm font-bold">1</span>
+							</div>
+							<p>Votre site reflète votre identité professionnelle unique</p>
+						</div>
+						<div class="flex items-start space-x-3">
+							<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+								<span class="text-blue-600 text-sm font-bold">2</span>
+							</div>
+							<p>Le contenu est authentique et correspond à votre pratique</p>
+						</div>
+						<div class="flex items-start space-x-3">
+							<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+								<span class="text-blue-600 text-sm font-bold">3</span>
+							</div>
+							<p>Vous maîtrisez votre communication en ligne</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Projects Grid -->
+	<section class="py-16 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
 				Mes dernières réalisations de sites internet pour psychologues
@@ -143,7 +173,7 @@ const psychologueProjects = [
 			
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				{psychologueProjects.map((project) => (
-					<div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+					<div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100">
 						<div class="relative group">
 							<img 
 								src={project.image} 
@@ -196,14 +226,14 @@ const psychologueProjects = [
 	</section>
 
 	<!-- Services Section -->
-	<section class="py-16 bg-white">
+	<section class="py-16 bg-gray-50">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
 				Mes services pour les psychologues
 			</h2>
 			
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-				<div class="text-center">
+				<div class="bg-white p-8 rounded-lg shadow-lg text-center">
 					<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
 						<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
@@ -215,7 +245,7 @@ const psychologueProjects = [
 					</p>
 				</div>
 				
-				<div class="text-center">
+				<div class="bg-white p-8 rounded-lg shadow-lg text-center">
 					<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
 						<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
@@ -227,7 +257,7 @@ const psychologueProjects = [
 					</p>
 				</div>
 				
-				<div class="text-center">
+				<div class="bg-white p-8 rounded-lg shadow-lg text-center">
 					<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
 						<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
@@ -251,9 +281,14 @@ const psychologueProjects = [
 			<p class="text-xl mb-8 max-w-2xl mx-auto">
 				Discutons de votre projet de site internet et créons ensemble votre présence en ligne.
 			</p>
-			<a href="/contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-				Me contacter
-			</a>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+					Me contacter
+				</a>
+				<a href="/tarifs" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+					Voir mes tarifs
+				</a>
+			</div>
 		</div>
 	</section>
 </Layout>
