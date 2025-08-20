@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+/* Styles globaux personnalisés */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
