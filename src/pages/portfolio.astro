@@ -1,39 +1,79 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const projects = [
+
+
+const psychologueProjects = [
 	{
-		title: "Site pour psychologue",
-		description: "Site vitrine moderne pour un cabinet de psychologie avec prise de rendez-vous en ligne",
-		image: "/images/psy-blagnac-fullpage.png",
-		category: "Psychologie",
-		technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-		link: "/portfolio/sites-psychologues"
+		title: "Séverine Reisser",
+		description: "Site vitrine professionnel pour psychologue",
+		image: "/images/screenshots/psychologue-leslilas.png",
+		url: "https://psychologue-leslilas.fr/",
+		location: "Les Lilas"
 	},
 	{
-		title: "Site d'association",
-		description: "Site web pour une association avec gestion de contenu et blog intégré",
-		image: "/images/screen-smb-fullpage.png",
-		category: "Association",
-		technologies: ["WordPress", "PHP", "MySQL", "SEO"],
-		link: "/portfolio/sites-associations"
+		title: "Audrey Larcebau",
+		description: "Site vitrine moderne pour psychologue",
+		image: "/images/screenshots/psy-emdr-cotebasque.fr.png",
+		url: "https://psy-emdr-cotebasque.fr",
+		location: "Anglet"
 	},
 	{
-		title: "Site d'entreprise",
-		description: "Site e-commerce moderne avec système de gestion des produits",
-		image: "/images/screen-sorgues.png",
-		category: "E-commerce",
-		technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-		link: "/portfolio/sites-entreprises"
+		title: "Ludivine Cazas Audureau",
+		description: "Site vitrine professionnel pour psychologue",
+		image: "/images/screenshots/cazas-audureau.jpg",
+		url: "https://psychologue-limoges.fr/",
+		location: "Limoges"
 	},
 	{
-		title: "Cours Pilates - Géraldine Adam",
-		description: "Site vitrine pour coach sportif spécialisée en Pilates, gym douce et stretching avec blog intégré",
-		image: "/images/cours-pilates-fullpage.png",
-		category: "Sport & Bien-être",
-		technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "SEO"],
-		link: "https://cours-pilates.fr/"
-	}
+		title: "Laure Yaakoubi",
+		description: "Site vitrine moderne pour psychologue",
+		image: "/images/screenshots/psy-montpellier.png",
+		url: "https://montpellier-psychologue.pro",
+		location: "Montpellier"
+	},
+	{
+		title: "Delphine Cima",
+		description: "Site vitrine professionnel pour psychologue",
+		image: "/images/screenshots/psy-manosque.png",
+		url: "https://psychologue-manosque.net/",
+		location: "Manosque"
+	},
+	{
+		title: "Marie-Josée GRASSO",
+		description: "Site vitrine moderne pour psychologue",
+		image: "/images/screenshots/psy-sorgues.png",
+		url: "https://psychologue-sorgues.fr/",
+		location: "Sorgues"
+	},
+	{
+		title: "Emanuelle FALLIGAN",
+		description: "Site vitrine professionnel pour psychologue",
+		image: "/images/screenshots/psy-sarrebourg.png",
+		url: "https://psychologue-sarrebourg.fr/",
+		location: "Sarrebourg"
+	},
+	{
+		title: "Stéphanie REQUET-CATINEAN",
+		description: "Site vitrine moderne pour psychologue",
+		image: "/images/screenshots/psy-andrezieux.jpg",
+		url: "https://psychologue-andrezieux-boutheon.fr/",
+		location: "Andrézieux-Bouthéon"
+	},
+	{
+		title: "Thomas Mouries",
+		description: "Site vitrine pour ostéopathe D.O avec spécialisations",
+		image: "/images/screenshots/osteopathe-toulouse-mouries.png",
+		url: "https://osteopathe-toulouse-mouries.fr/",
+		location: "Toulouse"
+	},
+	{
+		title: "Géraldine Adam",
+		description: "Site vitrine pour coach sportif spécialisée en Pilates",
+		image: "/images/screenshots/cours-pilates-fullpage.png",
+		url: "https://cours-pilates.fr/",
+		location: "Sceaux"
+	},
 ];
 ---
 
@@ -55,44 +95,124 @@ const projects = [
 		</div>
 	</section>
 
-	<!-- Projects Grid -->
-	<section class="py-16 bg-white">
+
+
+	<!-- Sites Psychologues Section -->
+	<section id="sites-psychologues" class="py-16 bg-gray-50">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+				Sites internet pour psychologues
+			</h2>
+			
+			<!-- Introduction -->
+			<div class="max-w-4xl mx-auto mb-12">
+				<div class="prose prose-lg mx-auto">
+					<p class="text-xl text-gray-600 mb-6">
+						Psychologue en libéral et ancien <strong>Tech Lead</strong> pour des sites à fort trafic (century21.fr, lefigaro.fr), je combine une expertise technique de haut niveau avec une compréhension approfondie des enjeux de la pratique libérale en psychologie.
+					</p>
+					<p class="text-lg text-gray-600 mb-6">
+						Cette double compétence m'a naturellement amené à créer des <strong>sites internet pour des psychologues</strong> qui allient performance technique, design professionnel et contenu adapté aux spécificités de notre métier.
+					</p>
+					<p class="text-lg text-gray-600 mb-6">
+						<strong>PARTICIPER</strong>. Parce qu'il s'agit bien de cela. Mes clients ne sont pas passifs. Je m'occupe des aspects techniques de la réalisation du site internet, et procède avec mon client/collègue à une co-construction de son contenu.
+					</p>
+					<p class="text-lg text-gray-600">
+						En effet, un <strong>site internet de psychologue</strong>, ce n'est pas simplement une vitrine. C'est un outil de communication qui reflète votre identité professionnelle et votre approche thérapeutique. Il permet aux futurs patients de mieux vous connaître avant même la première consultation.
+					</p>
+				</div>
+			</div>
+
+			<!-- Approach Section -->
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+				<div>
+					<h3 class="text-2xl font-semibold text-gray-900 mb-6">
+						Mon approche collaborative
+					</h3>
+					<div class="space-y-4 text-gray-600">
+						<p>
+							Je ne crée pas des sites "clés en main" sans votre implication. Au contraire, je vous accompagne dans la réflexion sur votre identité professionnelle et la façon de la présenter en ligne.
+						</p>
+						<p>
+							Ensemble, nous définissons :
+						</p>
+						<ul class="list-disc list-inside space-y-2 ml-4">
+							<li>Votre approche thérapeutique</li>
+							<li>Vos spécialités et domaines d'expertise</li>
+							<li>L'organisation de votre cabinet</li>
+							<li>Les informations pratiques pour vos patients</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bg-white p-8 rounded-lg shadow-lg">
+					<h4 class="text-lg font-semibold text-gray-900 mb-4">Pourquoi cette approche ?</h4>
+					<div class="space-y-3 text-gray-600">
+						<div class="flex items-start space-x-3">
+							<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+								<span class="text-blue-600 text-sm font-bold">1</span>
+							</div>
+							<p>Votre site reflète votre identité professionnelle unique</p>
+						</div>
+						<div class="flex items-start space-x-3">
+							<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+								<span class="text-blue-600 text-sm font-bold">2</span>
+							</div>
+							<p>Le contenu est authentique et correspond à votre pratique</p>
+						</div>
+						<div class="flex items-start space-x-3">
+							<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+								<span class="text-blue-600 text-sm font-bold">3</span>
+							</div>
+							<p>Vous maîtrisez votre communication en ligne</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Projects Grid -->
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-				{projects.map((project) => (
-					<div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-						<div class="relative">
+				{psychologueProjects.map((project) => (
+					<div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col">
+						<div class="relative group">
 							<img 
 								src={project.image} 
 								alt={project.title}
 								class="w-full h-48 object-cover"
 							/>
-							<div class="absolute top-4 left-4">
-								<span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-									{project.category}
-								</span>
+							<div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+								<a 
+									href={project.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+								>
+									Voir le site
+								</a>
 							</div>
 						</div>
-						<div class="p-6">
+						<div class="p-6 flex flex-col flex-grow border-t border-gray-200 bg-gray-50">
 							<h3 class="text-xl font-semibold text-gray-900 mb-2">
 								{project.title}
 							</h3>
-							<p class="text-gray-600 mb-4">
+							<p class="text-gray-600 mb-3">
 								{project.description}
 							</p>
-							<div class="flex flex-wrap gap-2 mb-4">
-								{project.technologies.map((tech) => (
-									<span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">
-										{tech}
-									</span>
-								))}
+							<div class="flex items-center text-sm text-gray-500 mb-4">
+								<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+								</svg>
+								{project.location}
 							</div>
-							<a 
-								href={project.link}
-								class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-							>
-								Voir le projet
-							</a>
+							<div class="mt-auto">
+								<a 
+									href={project.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+								>
+									Visiter le site
+								</a>
+							</div>
 						</div>
 					</div>
 				))}
@@ -100,61 +220,7 @@ const projects = [
 		</div>
 	</section>
 
-	<!-- Categories Section -->
-	<section class="py-16 bg-gray-50">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
-				Mes spécialités
-			</h2>
-			
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-				<div class="bg-white p-8 rounded-lg shadow-lg text-center">
-					<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-						<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-						</svg>
-					</div>
-					<h3 class="text-xl font-semibold text-gray-900 mb-4">Sites pour psychologues</h3>
-					<p class="text-gray-600 mb-4">
-						Sites vitrines professionnels adaptés aux besoins spécifiques des psychologues et thérapeutes.
-					</p>
-					<a href="/portfolio/sites-psychologues" class="text-blue-600 hover:text-blue-800 font-medium">
-						Voir les exemples →
-					</a>
-				</div>
-				
-				<div class="bg-white p-8 rounded-lg shadow-lg text-center">
-					<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-						<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-						</svg>
-					</div>
-					<h3 class="text-xl font-semibold text-gray-900 mb-4">Sites d'associations</h3>
-					<p class="text-gray-600 mb-4">
-						Plateformes web pour associations avec gestion de contenu et outils de communication.
-					</p>
-					<a href="/portfolio/sites-associations" class="text-green-600 hover:text-green-800 font-medium">
-						Voir les exemples →
-					</a>
-				</div>
-				
-				<div class="bg-white p-8 rounded-lg shadow-lg text-center">
-					<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-						<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-						</svg>
-					</div>
-					<h3 class="text-xl font-semibold text-gray-900 mb-4">Sites d'entreprises</h3>
-					<p class="text-gray-600 mb-4">
-						Sites web professionnels et e-commerce pour entreprises de toutes tailles.
-					</p>
-					<a href="/portfolio/sites-entreprises" class="text-purple-600 hover:text-purple-800 font-medium">
-						Voir les exemples →
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
+
 
 	<!-- CTA Section -->
 	<section class="py-16 bg-blue-600 text-white">
@@ -165,9 +231,14 @@ const projects = [
 			<p class="text-xl mb-8 max-w-2xl mx-auto">
 				Contactez-moi pour discuter de votre projet et obtenir un devis personnalisé.
 			</p>
-			<a href="/contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-				Me contacter
-			</a>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+					Me contacter
+				</a>
+				<a href="/tarifs" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+					Voir mes tarifs
+				</a>
+			</div>
 		</div>
 	</section>
 </Layout>

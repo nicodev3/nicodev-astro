@@ -1,0 +1,159 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+// Récupérer le slug depuis l'URL
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: { entry: post }
+	}));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout 
+	title={`${entry.data.title} - Nicolas Devaux`}
+	description={entry.data.description}
+>
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<div class="flex items-center justify-center text-sm mb-4">
+					<time datetime={entry.data.pubDate}>
+						{new Date(entry.data.pubDate).toLocaleDateString('fr-FR', {
+							year: 'numeric',
+							month: 'long',
+							day: 'numeric'
+						})}
+					</time>
+					<span class="mx-2">•</span>
+					<span>{entry.data.author}</span>
+				</div>
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					{entry.data.title}
+				</h1>
+				<p class="text-xl mb-8 max-w-3xl mx-auto">
+					{entry.data.description}
+				</p>
+				<div class="flex flex-wrap justify-center gap-2">
+					{entry.data.tags?.map((tag: string) => (
+						<span class="bg-white bg-opacity-20 text-white px-3 py-1 rounded-full text-sm">
+							{tag}
+						</span>
+					))}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Table of Contents -->
+	<section class="py-8 bg-gray-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<nav class="toc-container bg-white border-l-4 border-blue-600 p-6 rounded-lg shadow-sm">
+				<h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+					<svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+					</svg>
+					Plan de l'article
+				</h2>
+				<ul class="space-y-2">
+					<li>
+						<a href="#navigateur" class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 font-semibold text-base">
+							Le navigateur : fenêtre sur le Web
+						</a>
+						<ul class="ml-4 mt-2 space-y-1">
+							<li>
+								<a href="#navigateurs" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
+									Les différents navigateurs
+								</a>
+							</li>
+							<li>
+								<a href="#interprete" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
+									Un interprète pour le Web
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#langages" class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 font-semibold text-base">
+							Du code à la page : les langages du Web
+						</a>
+						<ul class="ml-4 mt-2 space-y-1">
+							<li>
+								<a href="#html" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
+									HTML : des balises pour structurer le Web
+								</a>
+							</li>
+							<li>
+								<a href="#css" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
+									CSS : mettre en forme le HTML
+								</a>
+							</li>
+							<li>
+								<a href="#javascript" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
+									JavaScript : donner vie au contenu
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#contenu" class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 font-semibold text-base">
+							Du contenu, du contenu, encore du contenu !
+						</a>
+						<ul class="ml-4 mt-2 space-y-1">
+							<li>
+								<a href="#structure" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
+									Structurer les données
+								</a>
+							</li>
+							<li>
+								<a href="#ux" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
+									L'UX, une donnée à ne pas négliger
+								</a>
+							</li>
+							<li>
+								<a href="#accessibilite" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
+									L'accessibilité, une nécessité, un challenge
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#conclusion" class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 font-semibold text-base">
+							Conclusion
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<!-- Article Content -->
+	<article class="py-16 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="prose prose-lg max-w-none">
+				<Content />
+			</div>
+		</div>
+	</article>
+
+	<!-- Navigation -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<a 
+					href="/blog"
+					class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+				>
+					← Retour au blog
+				</a>
+			</div>
+		</div>
+	</section>
+</Layout>
