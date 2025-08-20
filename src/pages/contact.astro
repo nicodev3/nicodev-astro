@@ -1,0 +1,241 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+	title="Contact - Nicolas Devaux"
+	description="Contactez-moi pour discuter de votre projet de site internet"
+>
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<h1 class="text-4xl md:text-6xl font-bold mb-6">
+					Contactez-moi
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+					Discutons de votre projet de site internet
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+				<!-- Contact Form -->
+				<div>
+					<h2 class="text-3xl font-bold text-gray-900 mb-8">
+						Envoyez-moi un message
+					</h2>
+					
+					<form class="space-y-6">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div>
+								<label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">
+									Prénom *
+								</label>
+								<input 
+									type="text" 
+									id="firstName" 
+									name="firstName" 
+									required
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+								/>
+							</div>
+							<div>
+								<label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">
+									Nom *
+								</label>
+								<input 
+									type="text" 
+									id="lastName" 
+									name="lastName" 
+									required
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+								/>
+							</div>
+						</div>
+						
+						<div>
+							<label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+								Email *
+							</label>
+							<input 
+								type="email" 
+								id="email" 
+								name="email" 
+								required
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							/>
+						</div>
+						
+						<div>
+							<label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+								Téléphone
+							</label>
+							<input 
+								type="tel" 
+								id="phone" 
+								name="phone"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							/>
+						</div>
+						
+						<div>
+							<label for="projectType" class="block text-sm font-medium text-gray-700 mb-2">
+								Type de projet *
+							</label>
+							<select 
+								id="projectType" 
+								name="projectType" 
+								required
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							>
+								<option value="">Sélectionnez un type de projet</option>
+								<option value="psychologue">Site pour psychologue</option>
+								<option value="association">Site d'association</option>
+								<option value="entreprise">Site d'entreprise</option>
+								<option value="ecommerce">Site e-commerce</option>
+								<option value="autre">Autre</option>
+							</select>
+						</div>
+						
+						<div>
+							<label for="budget" class="block text-sm font-medium text-gray-700 mb-2">
+								Budget estimé
+							</label>
+							<select 
+								id="budget" 
+								name="budget"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							>
+								<option value="">Sélectionnez un budget</option>
+								<option value="1000-3000">1 000€ - 3 000€</option>
+								<option value="3000-5000">3 000€ - 5 000€</option>
+								<option value="5000-10000">5 000€ - 10 000€</option>
+								<option value="10000+">Plus de 10 000€</option>
+								<option value="a-definir">À définir</option>
+							</select>
+						</div>
+						
+						<div>
+							<label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+								Description de votre projet *
+							</label>
+							<textarea 
+								id="message" 
+								name="message" 
+								rows="6"
+								required
+								placeholder="Décrivez votre projet, vos besoins, vos objectifs..."
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							></textarea>
+						</div>
+						
+						<button 
+							type="submit"
+							class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+						>
+							Envoyer le message
+						</button>
+					</form>
+				</div>
+				
+				<!-- Contact Info -->
+				<div>
+					<h2 class="text-3xl font-bold text-gray-900 mb-8">
+						Mes coordonnées
+					</h2>
+					
+					<div class="space-y-8">
+						<div class="flex items-start space-x-4">
+							<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+								<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+								<p class="text-gray-600">
+									<a href="mailto:contact.nicodev@gmail.com" class="text-blue-600 hover:text-blue-800">
+										contact.nicodev@gmail.com
+									</a>
+								</p>
+							</div>
+						</div>
+						
+						<div class="flex items-start space-x-4">
+							<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+								<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-lg font-semibold text-gray-900 mb-2">GitHub</h3>
+								<p class="text-gray-600">
+									<a href="https://github.com/nicodev3" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">
+										github.com/nicodev3
+									</a>
+								</p>
+							</div>
+						</div>
+						
+						<div class="flex items-start space-x-4">
+							<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+								<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-lg font-semibold text-gray-900 mb-2">Zone d'intervention</h3>
+								<p class="text-gray-600">
+									France entière (travail à distance)<br>
+									Région parisienne et sud-ouest (déplacements possibles)
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					<!-- FAQ Section -->
+					<div class="mt-12">
+						<h3 class="text-xl font-semibold text-gray-900 mb-6">
+							Questions fréquentes
+						</h3>
+						
+						<div class="space-y-4">
+							<div class="bg-gray-50 p-4 rounded-lg">
+								<h4 class="font-medium text-gray-900 mb-2">
+									Combien de temps faut-il pour créer un site ?
+								</h4>
+								<p class="text-gray-600 text-sm">
+									Entre 2 à 8 semaines selon la complexité du projet et vos besoins.
+								</p>
+							</div>
+							
+							<div class="bg-gray-50 p-4 rounded-lg">
+								<h4 class="font-medium text-gray-900 mb-2">
+									Proposez-vous la maintenance ?
+								</h4>
+								<p class="text-gray-600 text-sm">
+									Oui, je propose des contrats de maintenance pour assurer le bon fonctionnement de votre site.
+								</p>
+							</div>
+							
+							<div class="bg-gray-50 p-4 rounded-lg">
+								<h4 class="font-medium text-gray-900 mb-2">
+									Quels sont vos tarifs ?
+								</h4>
+								<p class="text-gray-600 text-sm">
+									Mes tarifs varient selon la complexité du projet. Contactez-moi pour un devis personnalisé.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
